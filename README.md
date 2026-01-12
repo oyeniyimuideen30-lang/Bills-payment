@@ -27,9 +27,6 @@ The collection uses **Bearer Token Authentication**.
 > [!IMPORTANT]
 > The current collection contains hardcoded staging tokens. For security, it is recommended to use environment variables (`{{token}}`) and GitHub Secrets when running in a CI/CD pipeline.
 
-### Key Data Points
-* **Base URL (v3)**: `https://servicesv3.staging.wayabank.ng`
-* **Base URL (General)**: `https://services.staging.wayabank.ng`
 
 ---
 
