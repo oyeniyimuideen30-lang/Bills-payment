@@ -1,0 +1,217 @@
+{
+	"info": {
+		"_postman_id": "7811099e-4b76-4cf7-bc37-80948e3d1192",
+		"name": "bills payment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47159992",
+		"_collection_link": "https://aviation-saganist-58957963-3460750.postman.co/workspace/Oyeniyi-Muideen's-Workspace~ad0cea1a-c7dc-4732-8c05-dd85b416a11d/collection/47159992-7811099e-4b76-4cf7-bc37-80948e3d1192?action=share&source=collection_link&creator=47159992"
+	},
+	"item": [
+		{
+			"name": "electricity",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6WyJST0xFX0NVU1RPTUVSIl0sImN1c3RvbWVySWQiOiJDT1JQMjAyNTEyMTYxMjQzMjY3MzcyIiwidXNlcklkIjoiMTQiLCJkZXZpY2VJZCI6IlRQMUEuMjIwNjI0LjAxNCIsInN1YiI6IjIzNDgxMDQzMzQ2ODgiLCJpYXQiOjE3NjYyNDMyOTYsImV4cCI6MTc5NzgwMDg5Nn0.-NAeae1NF6O6jcyt63uxvIUCfGPXbIW1_WzTFb1o_T8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userId\": \"14\",\r\n  \"pin\": \"2580\",\r\n  \"sourceAccountNumber\": \"7011028035\",\r\n  \"reference\": \"paymentes\",\r\n  \"serviceType\": \"eko_electric_postpaid\",\r\n  \"meterNumber\": \"101512454501\",\r\n  \"amount\": \"1000\",\r\n  \"phone\": \"08104334688\",\r\n  \"customerName\": \"OYENIYI MUIDEEN\",\r\n  \"customerEmail\": \"oye3300@yopmail.com\",\r\n  \"customerPhone\": \"08104334688\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://servicesv3.staging.wayabank.ng/transaction-payment/api/v1/wayabills/electricity/purchase",
+					"protocol": "https",
+					"host": [
+						"servicesv3",
+						"staging",
+						"wayabank",
+						"ng"
+					],
+					"path": [
+						"transaction-payment",
+						"api",
+						"v1",
+						"wayabills",
+						"electricity",
+						"purchase"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get elect provider",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6WyJST0xFX0NVU1RPTUVSIl0sImN1c3RvbWVySWQiOiJDT1JQMjAyNTEyMTIxMTI0MzgwNzY4IiwidXNlcklkIjoiNSIsImRldmljZUlkIjoiVFAxQS4yMjA2MjQuMDE0Iiwic3ViIjoiMjM0OTAxODYwMzQwMiIsImlhdCI6MTc2NjI0MzA4MSwiZXhwIjoxNzk3ODAwNjgxfQ.T8y9yJELk5eK_XYI6tXLb4QR5PYjqi0_39Y3lIiqpXo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://servicesv3.staging.wayabank.ng/transaction-payment/api/v1/wayabills/electricity/providers",
+					"protocol": "https",
+					"host": [
+						"servicesv3",
+						"staging",
+						"wayabank",
+						"ng"
+					],
+					"path": [
+						"transaction-payment",
+						"api",
+						"v1",
+						"wayabills",
+						"electricity",
+						"providers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "E-pin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6WyJST0xFX0NVU1RPTUVSIl0sImN1c3RvbWVySWQiOiJJTkRWMjAyNTExMDcxMDMzNDc0MzI4IiwidXNlcklkIjoiMTM3IiwiZGV2aWNlSWQiOiJUUDFBLjIyMDYyNC4wMTQiLCJzdWIiOiIyMzQ4MDYxNzY2NzIxIiwiaWF0IjoxNzY1MjY1MDUxLCJleHAiOjE3OTY4MjI2NTF9.x9WAVUnD7C9Y92thvUIMpUTYXlbIwd84kt86gFizWpk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userId\": \"137\",\r\n  \"pin\": \"2580\",\r\n  \"accountNumber\": \"2019852870\",\r\n  \"reference\": \"EPIN-WAEC-2025-902\",\r\n  \"serviceType\": \"waec\",\r\n  \"numberOfPins\": 1,\r\n  \"amount\": 2900.00,\r\n  \"customerName\": \"MUIDEEN OYENIYI\",\r\n  \"customerEmail\": \"oye2125@yopmail.com\",\r\n  \"customerPhone\": \"08061766721\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://services.staging.wayabank.ng/transaction-payment/api/v1/wayabills/epin/purchase",
+					"protocol": "https",
+					"host": [
+						"services",
+						"staging",
+						"wayabank",
+						"ng"
+					],
+					"path": [
+						"transaction-payment",
+						"api",
+						"v1",
+						"wayabills",
+						"epin",
+						"purchase"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "validate account number",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6WyJST0xFX0NVU1RPTUVSIl0sImN1c3RvbWVySWQiOiJDT1JQMjAyNTEyMTIxMTI0MzgwNzY4IiwidXNlcklkIjoiNSIsImRldmljZUlkIjoiVFAxQS4yMjA2MjQuMDE0Iiwic3ViIjoiMjM0OTAxODYwMzQwMiIsImlhdCI6MTc2NjI0MzA4MSwiZXhwIjoxNzk3ODAwNjgxfQ.T8y9yJELk5eK_XYI6tXLb4QR5PYjqi0_39Y3lIiqpXo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"service_type\": \"eko_electric_postpaid\",\r\n  \"account_number\": \"101512454501\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://servicesv3.staging.wayabank.ng/transaction-payment/api/v1/wayabills/validate",
+					"protocol": "https",
+					"host": [
+						"servicesv3",
+						"staging",
+						"wayabank",
+						"ng"
+					],
+					"path": [
+						"transaction-payment",
+						"api",
+						"v1",
+						"wayabills",
+						"validate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get cable provider",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6WyJST0xFX0NVU1RPTUVSIl0sImN1c3RvbWVySWQiOiJDT1JQMjAyNTEyMTYxMjQzMjY3MzcyIiwidXNlcklkIjoiMTQiLCJkZXZpY2VJZCI6IlRQMUEuMjIwNjI0LjAxNCIsInN1YiI6IjIzNDgxMDQzMzQ2ODgiLCJpYXQiOjE3NjYyNDQ2NjQsImV4cCI6MTc5NzgwMjI2NH0.Z09qqVA5WN2YZqDdqCnOD2DeqHUsm4Vocadm21U5IxM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://servicesv3.staging.wayabank.ng/transaction-payment/api/v1/wayabills/cable/providers",
+					"protocol": "https",
+					"host": [
+						"servicesv3",
+						"staging",
+						"wayabank",
+						"ng"
+					],
+					"path": [
+						"transaction-payment",
+						"api",
+						"v1",
+						"wayabills",
+						"cable",
+						"providers"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
